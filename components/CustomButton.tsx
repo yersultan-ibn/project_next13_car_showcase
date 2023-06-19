@@ -10,7 +10,7 @@ const Button = ({
   containerStyles,
   textStyles,
   title,
-  rightIcon,
+  rightIcon, 
   handleClick,
 }: CustomButtonProps) => (
   <button
