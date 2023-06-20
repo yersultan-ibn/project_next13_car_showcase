@@ -1,16 +1,16 @@
+"use client";
 import { Fragment } from "react";
 import Image from "next/image";
 
 import { Dialog, Transition } from "@headlessui/react";
-import { CarProps } from "@types";
-import { generateCarImageUrl } from "@utils";
+import { carProps } from "@/types";
+import { generateCarImageUrl } from "@/utils";
 
 interface CarDetailsProps {
   isOpen: boolean;
   closeModal: () => void;
   car: CarProps;
 }
-
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
   <>
     <Transition appear show={isOpen} as={Fragment}>
@@ -100,7 +100,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                     {car.make} {car.model}
                   </h2>
 
-                  <div className="mt-3 flex flex-wrap gap-4">
+                  <dчiv className="mt-3 flex flex-wrap gap-4">
                     {Object.entries(car).map(([key, value]) => (
                       <div
                         className="flex justify-between gap-5 w-full text-right"
@@ -112,7 +112,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => (
                         <p className="text-black-100 font-semibold">{value}</p>
                       </div>
                     ))}
-                  </div>
+                  </dчiv>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
